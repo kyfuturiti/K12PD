@@ -548,6 +548,21 @@
       width: 1px; height: 28px;
       background: rgba(255,255,255,0.25);
     }
+    .form-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--purple-mid);
+      background: linear-gradient(135deg, rgba(43,78,232,0.06), rgba(192,64,232,0.06));
+      border: 1.5px solid rgba(123,63,212,0.2);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .form-note svg { flex-shrink: 0; margin-top: 2px; color: var(--purple-mid); }
+    .form-note a { color: var(--purple-mid); font-weight: 600; }
   </style>
 </head>
 <body>
@@ -858,6 +873,10 @@
       <textarea id="notes" placeholder="Tell Trey about your team, goals, or any special requests..."></textarea>
     </div>
 
+    <div class="form-note">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span><strong>Heads up:</strong> clicking the button below will open an email draft in your email client — be sure to hit send to complete your request. If you don't hear back within 24–48 hours, please follow up directly at <a href="mailto:trey.pippin@ky.gov">trey.pippin@ky.gov</a>.</span>
+    </div>
     <button class="submit-btn" onclick="handleSubmit()">
       <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
       Send booking request
